@@ -22,3 +22,10 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 CREATE SCHEMA IF NOT EXISTS `nutrition` DEFAULT CHARACTER SET latin1 ;
 USE `nutrition` ;
+
+
+
+
+-- -----------------------------------------------------
+-- Table `nutrition`.`stores`
+-- -----------------------------------------------------
