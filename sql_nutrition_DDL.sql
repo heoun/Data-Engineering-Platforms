@@ -28,35 +28,27 @@ USE `nutrition` ;
 -- -----------------------------------------------------
 
 CREATE TABLE IF NOT EXISTS `nutrition`.`stores (
+  `state` VARCHAR(45) NOT NULL,
+  `county` VARCHAR(55) NOT NULL,
   `grocery_store_09` int(10) NOT NULL,
   `grocery_store_14` int(10) NOT NULL,
+  `grocery_store_change` int(10) NOT NULL,
   `supercenter_09` int(10) NOT NULL,
   `supercenter_14` int(10) NOT NULL,
-  `
-
-
-CREATE TABLE IF NOT EXISTS `sakila_snowflake`.`dim_actor` (
-  `actor_key` INT(10) NOT NULL AUTO_INCREMENT,
-  `actor_last_update` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `actor_id` INT(10) NOT NULL,
-  `actor_last_name` VARCHAR(45) NOT NULL,
-  `actor_first_name` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`actor_key`))
+  `supercenter_change` int(10) NOT NULL,
+  `convenience_store_09` int(10) not null,
+  `convenience_store_14` int(10) not null,
+  `specialized_store_09` int(10) not null,
+  `specialized_store_change` int(10) not null,
+  `WIC_08` int(10) not null,
+  `WIC_12` int(10) not null,
+  `WIC_change` int(10) not null,
+  `SNAP_08` int(10) not null,
+  `SNAP_12` int(10) not null,
+  `SNAP_change` int(10) not null,
+  PRIMARY KEY (`county`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
-CREATE INDEX `dim_actor_last_update` ON `sakila_snowflake`.`dim_actor` (`actor_last_update` ASC);
-
-
-
-
-
-
-Divided into Grocery Stores / Supercenters / Convenience Stores / Specialized Stores / WIC / SNAP
-Information contains 2009 / 2014 / % change by county / 
-Can use the percentage change to measure the increase or decrease in wealth from 2009 to 2014. Some assumptions will need to be made on what class of wealth would be willing to shop where. For ex. SNAP/WIC would indicate the poor and has this increased or decreased since 2009.
-2009 is right after 2008 so it should be interesting to see how people have changed and whether there has been improvements in shopping habits and wealth patterns when compared to access and sociodemographic data.
-
-
-
+CREATE INDEX `county` ON `nurition`.`stores` (`county` ASC);
 
