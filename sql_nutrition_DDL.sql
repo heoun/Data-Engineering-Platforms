@@ -3,7 +3,7 @@
 **     DATA ENGINEERING PLATFORMS (MSCA 31012)
 ** File:   DEP - DDL - Nutrition Data
 ** Desc:   Creating the Nutrition Data Schema
-** Auth:   Han Jeon
+** Auth:   Han Jeon, Patrick Butler, Laura Burns, Rhys Chua, Roquiya Sayeq 
 ** Date:   08/11/2019
 ** ALL RIGHTS RESERVED | DO NOT DISTRIBUTE
 ************************************************/
