@@ -28,6 +28,7 @@ USE `nutrition` ;
 -- -----------------------------------------------------
 
 CREATE TABLE IF NOT EXISTS `nutrition`.`stores` (
+  `county_key` INT(10) NOT NULL,
   `state` VARCHAR(45) NOT NULL,
   `county` VARCHAR(55) NOT NULL,
   `grocery_store_09` int(10) NOT NULL,
