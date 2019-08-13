@@ -26,6 +26,65 @@ USE `nutrition` ;
 -- -----------------------------------------------------
 -- Table `nutrition`.`stores`
 -- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `county` (
+  `fips` INT(6),
+  `state` VARCHAR(45) NOT NULL,
+  `county` VARCHAR(45) NOT NULL,
+  `2010_census_population` INT(11),
+  `population_estimate_2011` INT(11),
+  `population_estimate_2012` INT(11),
+  `population_estimate_2013` INT(11),
+  `population_estimate_2014` INT(11),
+  `population_estimate_2015` INT(11),
+  `population_estimate_2016` INT(11),
+  PRIMARY KEY  (`fips`))
+  ENGINE = InnoDB
+DEFAULT CHARACTER SET = latin1;
+
+CREATE TABLE IF NOT EXISTS `state` (
+    `state_fips` SMALLINT(6),
+    `state` VARCHAR(45),
+    `wic_participants_fy_2009` INT(11),
+    `wic_participants_fy_2011` INT(11),
+    `wic_participants_fy_2012` INT(11),
+    `wic_participants_fy_2013` INT(11),
+    `wic_participants_fy_2014` INT(11),
+    `wic_participants_fy_2015` INT(11),
+    `national_school_lunch_program_participants_fy_2009` INT(11),
+    `national_school_lunch_program_participants_fy_2011` INT(11),
+    `national_school_lunch_program_participants_fy_2012` INT(11),
+    `national_school_lunch_program_participants_fy_2013` INT(11),
+    `national_school_lunch_program_participants_fy_2014` INT(11),
+    `national_school_lunch_program_participants_fy_2015` INT(11),
+    `school_breakfast_program_participants_fy_2009` INT(11),
+    `school_breakfast_program_participants_fy_2011` INT(11),
+    `school_breakfast_program_participants_fy_2012` INT(11),
+    `school_breakfast_program_participants_fy_2013` INT(11),
+    `school_breakfast_program_participants_fy_2014` INT(11),
+    `school_breakfast_program_participants_fy_2015` INT(11),
+    `child_adult_care_participants_fy_2009` INT(11),
+    `child_adult_care_participants_fy_2011` INT(11),
+    `child_adult_care_participants_fy_2012` INT(11),
+    `child_adult_care_participants_fy_2013` INT(11),
+    `child_adult_care_participants_fy_2014` INT(11),
+    `child_adult_care_participants_fy_2015` INT(11),
+    `summer_food_participants_fy_2009` INT(11),
+    `summer_food_participants_fy_2011` INT(11),
+    `summer_food_participants_fy_2012` INT(11),
+    `summer_food_participants_fy_2013` INT(11),
+    `summer_food_participants_fy_2014` INT(11),
+    `summer_food_participants_fy_2015` INT(11),
+    `state_population_2009` INT(11),
+    `state_population_2010` INT(11),
+    `state_population_2011` INT(11),
+    `state_population_2012` INT(11),
+    `state_population_2013` INT(11),
+    `state_population_2014` INT(11),
+    `state_population_2015` INT(11),
+    `state_population_2016` INT(11),
+  PRIMARY KEY (`state_fips`))
+  ENGINE = InnoDB
+DEFAULT CHARACTER SET = latin1;
 
 CREATE TABLE IF NOT EXISTS `nutrition`.`stores` (
   `state` VARCHAR(45) NOT NULL,
