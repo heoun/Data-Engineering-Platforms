@@ -1,3 +1,5 @@
+USE nutrition;
+
 INSERT INTO Year VALUES
 (1, 2007),
 (2, 2008),
@@ -5202,5 +5204,11 @@ INSERT INTO Location VALUES
 ("ts55", "c000", "s55", "s2"),
 ("ts56", "c000", "s56", "s2");
 
+SET foreign_key_checks = 0;
 
-
+LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/final_data_sql_na_omit_full.csv'
+INTO TABLE Nutrition_Access
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
